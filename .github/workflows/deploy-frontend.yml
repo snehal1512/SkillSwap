@@ -15,9 +15,9 @@ env:
 
   REACT_APP_API_URL: 'https://skill-swap-app-azazfrh8fvd0fufz.canadacentral-01.azurewebsites.net/api'
 
-  REACT_APP_AUTH0_DOMAIN: 'YOUR_AUTH0_DOMAIN'
-  REACT_APP_AUTH0_CLIENT_ID: 'YOUR_AUTH0_CLIENT_ID'
-  REACT_APP_AUTH0_AUDIENCE: 'YOUR_AUTH0_AUDIENCE'
+  REACT_APP_AUTH0_DOMAIN: 'dev-nztqa6j7vdjyda18.us.auth0.com'
+  REACT_APP_AUTH0_CLIENT_ID: 'RjLpacwAe4X7OqvNVWwhzUS5xbIJCpku'
+  REACT_APP_AUTH0_AUDIENCE: 'https://dev-nztqa6j7vdjyda18.us.auth0.com/api/v2/'
 
 jobs:
   build-and-deploy:
