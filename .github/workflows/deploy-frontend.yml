@@ -12,7 +12,12 @@ on:
 env:
   AZURE_WEBAPP_NAME: skill-swap-frontend
   NODE_VERSION: '24.x'
+
   REACT_APP_API_URL: 'https://skill-swap-app-azazfrh8fvd0fufz.canadacentral-01.azurewebsites.net/api'
+
+  REACT_APP_AUTH0_DOMAIN: 'YOUR_AUTH0_DOMAIN'
+  REACT_APP_AUTH0_CLIENT_ID: 'YOUR_AUTH0_CLIENT_ID'
+  REACT_APP_AUTH0_AUDIENCE: 'YOUR_AUTH0_AUDIENCE'
 
 jobs:
   build-and-deploy:
@@ -37,6 +42,9 @@ jobs:
         working-directory: frontend
         env:
           REACT_APP_API_URL: ${{ env.REACT_APP_API_URL }}
+          REACT_APP_AUTH0_DOMAIN: ${{ env.REACT_APP_AUTH0_DOMAIN }}
+          REACT_APP_AUTH0_CLIENT_ID: ${{ env.REACT_APP_AUTH0_CLIENT_ID }}
+          REACT_APP_AUTH0_AUDIENCE: ${{ env.REACT_APP_AUTH0_AUDIENCE }}
           CI: false
         run: npm run build
 
