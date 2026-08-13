@@ -11,11 +11,15 @@ const app = express();
 // ✅ Enable CORS before any routes
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://127.0.0.1:3000"], // allow your React app
+    origin: [
+      "http://localhost:3000",
+      "http://127.0.0.1:3000",
+      "https://skill-swap-frontend-g8ffhqdybkejcwdn.canadacentral-01.azurewebsites.net"
+    ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
-    credentials: true, // only if you're using cookies or tokens
-    optionsSuccessStatus: 200 // some legacy browsers choke on 204
+    credentials: true,
+    optionsSuccessStatus: 200
   })
 );
 
